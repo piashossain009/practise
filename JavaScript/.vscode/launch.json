@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\loop.js"
+            "program": "${workspaceFolder}\\recursiveFactorial.js"
         }
     ]
 }
