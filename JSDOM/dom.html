@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom </title>
+    <style>
+        article {
+            border: 3px solid rebeccapurple;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1 id="first">DOM Explore</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat culpa dolorem minima fugit animi
+                consectetur eligendi porro, accusamus quisquam ipsa magnam placeat. Dignissimos!</p>
+        </section>
+
+        <section>
+            <h1>Dom Explore </h1>
+            <article>
+                <h2>article-1</h2>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, repellat
+                    inventore cum, veniam pariatur nemo quasi harum repellendus vero et laborum placeat aspernatur
+                    repudiandae esse alias sapiente error facere provident velit, fugit dolorum dolores! Itaque?</p>
+            </article>
+            <article class="special">
+                <h2>article-2</h2>
+                <p class="author">author-2</p>
+                <p class="description">Dicta, atque. Sapiente iure ratione eligendi nam culpa. Sit, neque quae suscipit
+                    omnis veniam in explicabo possimus ratione voluptatem corrupti magni quas dolores, praesentium cum
+                    deleniti similique dolorem maxime, assumenda qui perspiciatis. Architecto, inventore vero.</p>
+            </article>
+            <article class="special">
+                <h2>article-3</h2>
+                <p class="author">author-3</p>
+                <p class="description">Voluptatem sequi, consequatur dolorem, cum libero tempore dolor aperiam
+                    perspiciatis odio id nesciunt in obcaecati sapiente repudiandae doloremque quam et, reprehenderit
+                    explicabo atque necessitatibus quos magni error. Incidunt ratione odio repudiandae cum, distinctio
+                    minus dolor?</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        var first = document.getElementById('first');
+        first.style.color = " purple";
+        first.style.fontSize = " 65px";
+
+        var authors = document.getElementsByClassName('author');
+
+        for (var i = 0; i < authors.length; i++) {
+            var element = authors[i];
+            // console.log(element);
+            element.innerHTML = 'lekhok-' + (i+1);
+            element.style.fontSize = " 35px";
+        }
+
+        var second = document.querySelectorAll('.special h2');
+        for (var i = 0; i < second.length; i++) {
+            var element = second[i];
+            // console.log(element);
+            element.innerHTML = 'lekhok ARTICLE-' + (i+1);
+            element.style.fontSize = " 55px";
+        }
+    </script>
+</body>
+
+</html>

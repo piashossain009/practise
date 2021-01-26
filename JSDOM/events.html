@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('what is allert')">Click me</button>
+    <button id="one">FontChange</button>
+
+    <button id="red">red</button>
+    <button id="green">green</button>
+    <button id="blue">blue</button>
+    <button id="yellow">yellow</button>
+
+    <script>
+        document.getElementById('one').addEventListener('click', function(){
+            document.body.style.fontSize = '40px';
+            document.body.style.textAlign = 'center';
+            
+
+        })
+        function red(){
+            document.body.style.backgroundColor = "red";
+        }
+
+        function green(){
+            document.body.style.backgroundColor = "green";
+        }
+        function yellow(){
+            document.body.style.backgroundColor = "yellow";
+        }
+        function blue(){
+            document.body.style.backgroundColor = "blue";
+        }
+        var redbutton = document.getElementById('red');
+        redbutton.onclick = red;
+
+        var greenbutton = document.getElementById('green');
+        greenbutton.onclick = green;
+
+        var bluebutton = document.getElementById('blue');
+        bluebutton.onclick = blue;
+
+        var yellowbutton = document.getElementById('yellow');
+        // yellowbutton.onclick = yellow;
+        yellowbutton.addEventListener('click',yellow);
+
+    </script>
+</body>
+</html>
